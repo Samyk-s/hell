@@ -1,7 +1,14 @@
-
-import { Link } from 'react-scroll';
-import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaMoon, FaSun, FaFileAlt } from 'react-icons/fa';
-import { useTheme } from '../context/ThemeContext';
+import { Link } from "react-scroll";
+import {
+  FaHome,
+  FaUser,
+  FaProjectDiagram,
+  FaEnvelope,
+  FaMoon,
+  FaSun,
+  FaFileAlt,
+} from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -9,10 +16,18 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="download-buttons">
-        <button className="download-btn" onClick={() => window.open('/path-to-your-resume.pdf', '_blank')}>
+        <button
+          className="download-btn"
+          onClick={() => window.open('/profile/Samyak_Bajracharya_Resume.pdf', '_blank')}
+        >
           <FaFileAlt /> Resume
         </button>
-        <button className="download-btn" onClick={() => window.open('/path-to-your-cover-letter.pdf', '_blank')}>
+        <button
+          className="download-btn"
+          onClick={() =>
+            window.open("/profile/Samyak_Bajracharya_CoverLetter.pdf", "_blank")
+          }
+        >
           <FaFileAlt /> Cover Letter
         </button>
       </div>
@@ -39,11 +54,10 @@ const Navbar = () => {
         </li>
       </ul>
       <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === 'light' ? <FaMoon /> : <FaSun />}
+        {theme === "light" ? <FaMoon /> : <FaSun />}
       </button>
     </nav>
   );
 };
 
 export default Navbar;
-
