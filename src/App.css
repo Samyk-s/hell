@@ -25,23 +25,25 @@
   }
   
   .navbar {
-    position: fixed;
+    position: center;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
+    background-color: black;
     align-items: center;
-    background-color: var(--navbar-bg);
     padding: 1rem;
     z-index: 1000;
   }
   
   .navbar ul {
+    justify-content: center;
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: white;
   }
   
   .navbar li {
@@ -53,6 +55,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    color: wheat;
   }
   
   .navbar a svg {
@@ -82,10 +85,11 @@
     color: var(--navbar-text);
     font-size: 1.2rem;
     cursor: pointer;
+    color: wheat;
   }
   
   .section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

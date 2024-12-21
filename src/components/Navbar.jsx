@@ -3,7 +3,6 @@ import {
   FaHome,
   FaUser,
   FaProjectDiagram,
-  FaEnvelope,
   FaMoon,
   FaSun,
   FaFileAlt,
@@ -18,7 +17,9 @@ const Navbar = () => {
       <div className="download-buttons">
         <button
           className="download-btn"
-          onClick={() => window.open('/profile/Samyak_Bajracharya_Resume.pdf', '_blank')}
+          onClick={() =>
+            window.open("/profile/Samyak_Bajracharya_Resume.pdf", "_blank")
+          }
         >
           <FaFileAlt /> Resume
         </button>
@@ -32,6 +33,9 @@ const Navbar = () => {
         </button>
       </div>
       <ul>
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {theme === "light" ? <FaMoon /> : <FaSun />}
+        </button>
         <li>
           <Link to="home" smooth={true} duration={500}>
             <FaHome /> Home
@@ -47,15 +51,7 @@ const Navbar = () => {
             <FaProjectDiagram /> Projects
           </Link>
         </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500}>
-            <FaEnvelope /> Contact
-          </Link>
-        </li>
       </ul>
-      <button className="theme-toggle" onClick={toggleTheme}>
-        {theme === "light" ? <FaMoon /> : <FaSun />}
-      </button>
     </nav>
   );
 };
